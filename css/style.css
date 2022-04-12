@@ -1,23 +1,71 @@
 .row {
   --bs-gutter-x: 0;
 }
+.row-aling{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#nubeLluvia{
+  text-align: -webkit-center;
+}
+#lienzo{
+    width: 170px;
+    height: 11em;
+    display: flex;
+    position: relative;
+    bottom:115px;
+}
+.iconoIzq{
+  color:white;
+  font-size: 35px;
+}
+.iconoUsuario{
+  color:white;
+  font-size: 3rem;
+}
+.iconoUsuario:hover{
+  color: #7e8890;
+  transition: 0.2s;
+}
+#colorBarra{
+  background: #7a6504;
+}
+#colorBarra:hover{
+  cursor: pointer;
+}
+body{
+  cursor: default;
+}
 #menuizquierda{
+    display:flex;
     width:  75px;
     height: 100%;
     background: black;
     position: fixed;
     color: white;
     flex-direction: column;
-    
+    align-items: center;
+    justify-content: center;
 }
 
-#menuizquierda .encabezado{
-    background:rgb(24, 24, 24);
+.encabezado{
+  position:fixed;
+  width: 75px;
+  z-index: 1;
+  text-align:center;
+  }
+#home{
+  display:flex;
+  
 }
 
 #opciones{
     justify-content: center;
     vertical-align: top;
+    display:flex;
+    flex-direction: column;
+    margin: 0em;
 }
 #opciones li{
     margin: 20px 0px ;
@@ -25,17 +73,27 @@
 #menuizquierda a{
     text-decoration: none;
     color: white;
+    margin: 0.4em 0em;
 }
 #menuizquierda ul li a{
     padding:20px;
     font-size: 10px;
     display: flex;
-
+    margin: 1em 0em;
 }
 #menuizquierda a:hover, #menuizquierda li:hover{
     background-color: rgb(90, 90, 90);
     color: rgb(29, 29, 29);
 }
+.encabezado:hover{
+  background-color: rgb(90, 90, 90);
+  color: rgb(29, 29, 29);
+}
+.btn:hover{
+  color:black;
+  background-color: white;
+}
+
 header{
     background-image:url(../images/code-wallpaper-14.jpg);
     width:100%;
@@ -47,10 +105,31 @@ header{
 }
 .padding-left{
     padding-left: 100px;
+    padding-right: 30px;
 }
 
 #bienvenida{
-    padding:10% 12%;
+    padding:0% 2% 9% 2%;
+}
+#saludo>a{
+    font-family: fantasy;
+    margin-bottom: 0em;
+    font-size: 4rem;
+    width:fit-content;
+}
+#saludo>a:hover{
+  -webkit-text-stroke: 1px white;
+  color: #202020; 
+  transition: 0.5s;
+}
+#saludo>h3{
+  font-family: monospace;
+  color:rgba(176, 176, 176);
+  width:fit-content;
+}
+#saludo>h3:hover{
+  color:#6e6124;
+  transition:0.5s;
 }
 .heading {
     position: relative;
@@ -58,6 +137,7 @@ header{
     font-size: 2em;
     font-weight: 300;
     margin: 0 0 50px 0;
+    padding-top: 0.5em;
   }
 
   .heading:after {
@@ -168,14 +248,14 @@ header{
   font-weight: 300;
   color: #374054;
 }
-.fondoIcono{
+.fondo{
   text-align: end;
-  background: aliceblue;
   border-radius: 50%;
-  width: 50px;
-  right: 50px;
+  width: 40px;
+  right: 40px;
 }
 #centrado{
+  display:flex;
   text-align: center;
 }
 #display-flex{
@@ -193,4 +273,190 @@ header{
 }
 .background-alt {
   background: #f2f2f5;
+}
+.fotoPerfil{
+  position: relative;
+    width: 8rem;
+    height: 100px;
+    border-radius: 50%;
+    float: right;
+    z-index: 99;
+    margin-left: 0px;
+    left: 30px;
+    bottom:10px;
+    transition: 0.5s;
+}
+.fotoPerfil:hover{
+  height:150px;
+  width:10rem;
+  border-radius:0%;
+}
+.rounded-circles{
+  border-radius: 50%;
+  transition: 0.5s;
+  color:#2020204b
+}
+.rounded-circles:hover{
+  border-radius: 0%;
+}
+/*=========================== Animacion============================== */
+.barraHab{
+  animation-name: barra;
+  animation-duration: 2s;
+}
+.centrado-flex{
+  display: flex;
+  justify-content: center;
+}
+@keyframes barra {
+  0%{width:0px}
+  
+  
+}
+#nubeGris{
+  width: 15em;
+  animation-name:nubeGris;
+  animation-duration:10s;
+  animation-iteration-count: infinite;
+  z-index: 1;
+}
+@keyframes nubeGris {
+  0%{margin-left: 0px;}
+  50%{margin-left: 20px;}
+  100%{margin-left: 0px;}
+}
+#nubeBlanca{
+  position: absolute;
+  width: 15em;
+  animation-name:nubeBlanca;
+  animation-duration:6s;
+  animation-iteration-count: infinite;
+  z-index: 2;
+}
+@keyframes nubeBlanca {
+  0%{margin-left: 0px;}
+  50%{margin-left: 5px;}
+  75%{marging-left:0px}
+  83%{margin-left: -4px;}
+  100%{margin-left: 0px;}
+}
+.efectoCaida>p{
+  margin-bottom: 0em;
+  font-weight:800;
+  font-size: 2em;
+  
+}
+.absolute>p{
+  display: flex;
+  flex-direction: column;
+  position:absolute;
+}
+
+.burbuja {
+  display: flex;
+  position:relative;
+  -webkit-animation: burbujas 2s linear infinite;
+          animation: burbujas 2s linear infinite;
+}
+
+.burbuja:nth-child(1) {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+}
+
+.burbuja:nth-child(2) {
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+}
+
+.burbuja:nth-child(3) {
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.burbuja:nth-child(4) {
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.burbuja:nth-child(5) {
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+}
+
+@-webkit-keyframes burbujas {
+  0% {
+    top: 0;
+    opacity: 100%;
+  }
+
+  100% {
+    top: 300px;
+    opacity: 0;
+  }
+}
+
+@keyframes burbujas {
+  0% {
+    top: 0;
+    opacity: 100%;
+  }
+ 
+  100% {
+    top: 300px;
+    opacity: 0;
+  }
+}
+
+
+/*==================Celular==================================*/
+@media screen and (max-width:767px) {
+  .vtimeline-content {
+    margin: 0px ;
+    text-align: center
+  }
+  .vtimeline-content h3{
+    text-align: center;
+  }
+  .vtimeline-content h3{
+    width:auto;
+    position:initial;
+
+  }
+  .vtimeline-icon{
+    display:none;
+  }
+  .vtimeline-date {
+    position: inherit;
+    text-align:center;
+    text-align: center;
+    width: 100%;
+}
+#experience-timeline:after{
+  display:none;
+}
+#experience-timeline:before{
+  display:none;
+}
+.nav-link {
+  padding: 2rem 0rem;
+}
+#menuizquierda {
+  width: fit-content;
+  width: 50px;
+}
+.encabezado{
+  height: fit-content;
+  width: 50px;
+  }
 }
