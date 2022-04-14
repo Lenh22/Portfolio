@@ -327,6 +327,10 @@ header{
     font-family: sans-serif;
     margin: 0;
   }
+  .grid-centrado{
+    display:flex;
+    font-family: monospace;
+  }
 
 
 .fotoPerfil:hover{
@@ -341,6 +345,10 @@ header{
 }
 .rounded-circles:hover{
   border-radius: 0%;
+}
+#configProyecto>button{
+  width: 10em;
+  height:3em;
 }
 /*=========================== Animacion============================== */
 .barraHab{
@@ -464,6 +472,11 @@ header{
 
 /*==================Celular==================================*/
 @media screen and (max-width:767px) {
+  .padding-left{
+    padding-left: 4.5em;
+    padding-right: 1em;
+}
+
   .vtimeline-content {
     margin: 0px ;
     text-align: center
@@ -478,6 +491,9 @@ header{
   }
   .vtimeline-content li {
     list-style:none ;
+    padding:0px;
+  }
+  .vtimeline-content ul {
     padding:0px;
   }
   .vtimeline-icon{
@@ -496,7 +512,7 @@ header{
   display:none;
 }
 .nav-link {
-  padding: 1rem 0rem;
+  padding: 5px 0rem;
 }
 #menuizquierda {
   width: fit-content;
@@ -521,6 +537,51 @@ header{
 
   #saludo{
     display:block;
-
   }
+  .grid-centrado{
+    display: grid;
+    justify-items: center;
+  }
+  .grid-centrado h4{
+    padding:5em;
+  }
+  #configProyecto{
+    display: block !important;;
+    justify-items: center;
+  }
+  #configProyecto>button{
+    margin-top: 1em;
+    margin-left: 1em;
+    text-align: center;
+  }
+}
+/* =========Horizontal=========== */
+@media screen and (max-height:390px) {
+  .nav-link {
+    padding: 5px 0rem;
+  }
+  #menuizquierda {
+    width: fit-content;
+    width: 40px;
+  }
+
+  #menuizquierda a{
+    font-size: 20px;
+    margin:0em;
+  }
+  .encabezado{
+    height: fit-content;
+    width: 40px;
+    }
+    #opciones{
+      justify-content: center;
+      vertical-align: top;
+      display:flex;
+      flex-direction: column;
+      margin: 0em;
+  }
+  .iconoIzq{
+    font-size: 20px;
+  }
+
 }
