@@ -556,7 +556,7 @@ header{
   }
 }
 /* =========Horizontal=========== */
-@media screen and (max-height:390px) {
+@media screen and (max-height:400px) {
   .nav-link {
     padding: 5px 0rem;
   }
