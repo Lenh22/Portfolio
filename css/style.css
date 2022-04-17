@@ -1,12 +1,29 @@
 .row {
   --bs-gutter-x: 0;
 }
+/* Barra Scroll lateral */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: black;
+  opacity: 0.5;
+}
+::-webkit-scrollbar-thumb {
+  border-radius:30px;
+  background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6e6124;
+}
+
 .row-aling{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 #nombrePersonal{
+  transition:1s;
   font-family: sans-serif;
 }
 #nombrePersonal:hover{
@@ -141,13 +158,14 @@ header{
 #saludo{
   margin-right: 5px;
 }
-#saludo>a{
+#saludo>i{
     font-family: fantasy;
+    font-style: normal;
     margin-bottom: 0em;
     font-size: 4rem;
     width:fit-content;
 }
-#saludo>a:hover{
+#saludo>i:hover{
   -webkit-text-stroke: 1px white;
   color: #202020; 
   transition: 0.5s;
@@ -350,6 +368,27 @@ header{
   width: 10em;
   height:3em;
 }
+#contactos p{
+color:#74808a;
+font-family: monospace;
+text-align: center;
+transition:1s;
+}
+#contactos p:hover{
+  transition:2s;
+  color:#dcd9d9;
+}
+#contactos div{
+  width: auto;
+  padding:0em 1em;
+}
+.desvanece:hover{
+  opacity: 0;
+  transition:3s;
+}
+.desvanece{
+  transition: 1s;
+}
 /*=========================== Animacion============================== */
 .barraHab{
   animation-name: barra;
@@ -361,8 +400,6 @@ header{
 }
 @keyframes barra {
   0%{width:0px}
-  
-  
 }
 #nubeGris{
   width: 15em;
@@ -469,6 +506,17 @@ header{
   }
 }
 
+.opacity{
+  animation-name: saludos;
+  animation-duration:2s;
+}
+@keyframes saludos{
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}
+
+
+
 
 /*==================Celular==================================*/
 @media screen and (max-width:767px) {
@@ -536,6 +584,7 @@ header{
   }
 
   #saludo{
+    overflow: hidden;
     display:block;
   }
   .grid-centrado{
