@@ -584,7 +584,6 @@ transition:1s;
   }
 
   #saludo{
-    overflow: hidden;
     display:block;
   }
   .grid-centrado{
