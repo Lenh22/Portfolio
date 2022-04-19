@@ -1,7 +1,7 @@
 .row {
   --bs-gutter-x: 0;
 }
-/* Barra Scroll lateral */
+/* Barra Scroll*/
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -16,7 +16,7 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #6e6124;
 }
-
+/*Fin de barra scroll*/
 .row-aling{
     display: flex;
     align-items: center;
@@ -56,7 +56,7 @@
 }
 #listaCursos a{
   text-decoration:none;
-  color:#6e6124
+  color:#6e6124;
 }
 #idiomas{
   justify-content:center;

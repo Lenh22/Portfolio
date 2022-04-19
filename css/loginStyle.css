@@ -1,0 +1,23 @@
+.login{
+    background-color: cadetblue;
+    font-family: monospace;
+}
+.login>.logoYTexto{
+    text-align: center;
+}
+.login>.logoYTexto>img{
+    width:40%;
+}
+
+.formulario>.btn{
+    width: 100%;
+    
+    
+}
+.formulario>.btn:hover{
+    color:black;
+    background-color: azure;
+}
+#emailHelp{
+    color: white;
+}
