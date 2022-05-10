@@ -273,7 +273,7 @@ header{
   background: #202020;
   border-radius: 50%;
   float: left;
-  z-index: 99;
+  z-index: 9;
   margin-left: 289px;
 }
 .circle {
@@ -328,9 +328,9 @@ header{
     height: 120px;
     border-radius: 50%;
     float: right;
-    z-index: 99;
+    z-index: 9;
     margin-left: 0px;
-    left: 30px;
+    left: 25px;
     bottom:10px;
     transition: 0.5s;
 }

@@ -1,0 +1,76 @@
+<div id="education" class="padding-left background-alt">
+    <h2 class="heading">Educación</h2>
+    <div>
+
+        <div class="conteiner-fluid">
+            <div class="row">
+                <!--Izq-->
+                <div class="col-12 col-md-8">
+                    <div class="row">
+                        <!-- Directiva para recorrer en el array del json education (IngFor) -->
+                        <div class="col-12 p-1" *ngFor="let education of educationList"> 
+                            <article class="card h-100">
+                                <div class="card-body">
+                                    <div class="descriptionEducation">
+                                        <div class="grid-centrado">
+                                            <img src="./assets/images/{{education.imgSchool}}"
+                                                class="border-3 rounded-circles float-start" alt="..." width="50px"
+                                                height="50px">
+                                            <div class="ps-2">
+                                                <h3>{{education.school}}</h3>
+                                                <span class="education-date">{{education.dateStart}} - {{education.dataEnd}}</span>
+                                            </div>
+                                        </div>
+                                        <h4>{{education.career}}</h4>
+                                        <ul class="">
+                                            <li>
+                                                Aprobadas: {{education.cantApproved}}
+                                            </li>
+                                            <li>
+                                                Promedio: {{education.avg}}
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                <!--Der-->
+                <div class="col-12 col-md-4 p-1">
+                    <article class="card h-100">
+                        <div class="card-body">
+                            <div class="">
+                                <div id="cursos" class="d-flex">
+                                    <div>
+                                        <h4>Cursos</h4>
+                                    </div>
+                                </div>
+                                <ul id="listaCursos">
+                                    <li *ngFor="let course of courseList">
+                                        <a target="_blank"
+                                            [href]="course.linkCourse">
+                                            {{course.tittleCourse}}
+                                        </a> | {{course.nameCourse}}
+                                    </li>
+                                </ul>
+                                <div id="idiomas" class="d-flex">
+                                    <div>
+                                        <h4>Idiomas</h4>
+                                    </div>
+                                </div>
+                                <ul id="listaIdiomas">
+                                    <li *ngFor="let idiom of idiomList">
+                                        {{idiom.idiomName}} | {{idiom.idiomLevel}}
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>

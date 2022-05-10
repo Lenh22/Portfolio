@@ -1,0 +1,13 @@
+<div id="skill" class="conteiner-fluid padding-left background-alt">
+    <h2 class="heading">Habilidades</h2>
+    <div id="/*experience-timeline*/">
+        <div class="row justify-content-between" >
+            <div class="col-12 col-md-5 p-3"*ngFor="let skill of skillList">
+                <h4>{{skill.skillName}}</h4>
+                <div class="bg-white col-12 col-md-9 placeholder-wave">
+                    <div id="colorBarra" class="barraHab placeholder" [style]="skill.skillLevel"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

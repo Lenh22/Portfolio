@@ -1,0 +1,25 @@
+<div id="proyecto" class="background-alt padding-left">
+    <h2 class="heading">Proyectos</h2>
+    <div class="container px-4 ">
+        <div class="row g-0">
+            <div class="col" *ngFor="let project of projectList">
+                <div class="p-3 border bg-light mb-3">
+                    <div id="configProyecto" class="d-flex justify-content-between">
+                        <div class="ps-2 col-md-6">
+                            <img src="./assets/images/{{project.projImg}}"
+                                class="border border-secondary border-3 rounded-circles float-start" alt="..."
+                                width="50px" height="50px">
+                            <h3 class="ps-2 row">{{project.projName}}</h3>
+                            <span class="education-date row ps-2">{{project.projStart}} - {{project.projEnd}}</span>
+                        </div>
+                        <button type="button" class="btn btn-secondary ">Mas Informacion</button>
+                    </div>
+                    <div class="p-3">
+                        {{project.projDescription}}
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

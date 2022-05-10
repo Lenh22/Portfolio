@@ -1,0 +1,23 @@
+<div id="experience" class="background-alt padding-left">
+    <h2 class="heading">Experiencias</h2>
+    <div id="experience-timeline">
+        <div class="vtimeline-point" *ngFor="let exp of expList">
+            <div class="vtimeline-icon">
+                <i class="circle">
+                </i>
+            </div>
+            <div class="row-fluid vtimeline-block">
+                <p class="vtimeline-date col-12 col-md-4">{{exp.expStart}} – {{exp.expEnd}}</p>
+                <div data-date="September 2015 – September 2016" class="vtimeline-content">
+                    <h3>{{exp.jobName}}</h3>
+                    <h4>{{exp.jobTittle}}</h4>
+                    <ul>
+                        <li *ngFor="let hw of homeworkList">
+                            {{exp.hw.hw}}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

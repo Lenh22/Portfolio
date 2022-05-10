@@ -16,430 +16,458 @@
 
   <link href="css/style.css" rel="stylesheet" />
 
+  <link href="css/loginStyle.css" rel="stylesheet" />
+
 </head>
 
 <body>
-
+  <!-- Navegador -->
   <nav>
-    <div id="home">
-      <div class="encabezado">
-        <a class="nav-link active" href="#ArgProg"><span class="material-icons-round iconoIzq">
-            home
-          </span></a>
+      <div id="home">
+          <div class="encabezado">
+              <a class="nav-link active" href="#ArgProg"><span class="material-icons-round iconoIzq">
+                      home
+                  </span></a>
 
+          </div>
       </div>
-    </div>
 
-    <div id="menuizquierda">
+      <div id="menuizquierda">
 
-      <ul id="opciones" class="list-unstyled">
-        <a class="nav-link active" href="#about">
-          <span class="material-icons-round iconoIzq">
-            description
-          </span></a>
-        <a class="nav-link active" href="#experience">
-          <span class="material-icons-round iconoIzq">
-            engineering
-          </span>
-
-          <a class="nav-link active" href="#education">
-            <span class="material-icons-round iconoIzq">
-              school
-            </span></a>
-          <a class="nav-link active" href="#skill">
-            <span class="material-icons-round iconoIzq">
-              code
-            </span></a>
-          <a class="nav-link active" href="#proyecto">
-            <span class="material-icons-round iconoIzq">
-              work
-            </span></a>
-      </ul>
-    </div>
+          <ul id="opciones" class="list-unstyled">
+              <a class="nav-link active" href="#about">
+                  <span class="material-icons-round iconoIzq">
+                      description
+                  </span></a>
+              <a class="nav-link active" href="#experience">
+                  <span class="material-icons-round iconoIzq">
+                      engineering
+                  </span></a>
+                  <a class="nav-link active" href="#education">
+                      <span class="material-icons-round iconoIzq">
+                          school
+                      </span></a>
+                  <a class="nav-link active" href="#skill">
+                      <span class="material-icons-round iconoIzq">
+                          code
+                      </span></a>
+                  <a class="nav-link active" href="#proyecto">
+                      <span class="material-icons-round iconoIzq">
+                          work
+                      </span></a>
+          </ul>
+      </div>
   </nav>
-
+    <!-- Login -->
+    <section id="centradoLogin" >
+        <div class="login conteiner p-3">  
+          <div class="row">
+            <div class="col-12 text-end">
+              <a class="nav-link active">
+                <span class="material-icons-round" id="cancel"  onclick="cerrarLogin()">
+                    cancel
+                </span></a>
+            </div>
+          </div>
+    
+          
+            <div class="logoYTexto">
+                <img src="../Portfolio/images/nubeB.png" class="" alt="Nube">
+                
+            </div>
+            <form class="formulario">
+            
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email </label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">Asi podra ingresar al modo edicion</div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <button type="submit" class="btn btn-secondary">Ingresar</button>
+              </form>
+          </div>
+      </section>
   <header class="padding-left">
-    <div class="opacity">
-      <div>
-        <!--logoArgProg y usuario-->
-        <div class="row-aling pe-3">
-          <div class="col-4">
-            <a target="_blank" href="https://www.argentina.gob.ar/produccion/transformacion-digital-y-economia-del-conocimiento/argentina-programa">
-              <img id="ArgProg"
-                src="//argentinaprograma.inti.gob.ar/pluginfile.php/1/theme_moove/logo/1648503444/APLogo-20-20.png"
-                alt="argpprod" width="200px"></a>
+      <div class="opacity">
+          <div>
+              <!--logoArgProg y usuario-->
+              <div class="row-aling pe-3">
+                  <div class="col-4">
+                      <a target="_blank"
+                          href="https://www.argentina.gob.ar/produccion/transformacion-digital-y-economia-del-conocimiento/argentina-programa">
+                          <img id="ArgProg"
+                              src="//argentinaprograma.inti.gob.ar/pluginfile.php/1/theme_moove/logo/1648503444/APLogo-20-20.png"
+                              alt="argpprod" width="200px"></a>
+                  </div>
+                  <div id="centrado" class="col-md-4 fondo">
+                      <a>
+                          <span class="material-icons-round iconoUsuario" onclick="abrirLogin()">
+                              account_circle
+                          </span>
+                      </a>
+                  </div>
+              </div>
+              <!--presentacion-->
+              <div id="bienvenida" class="row align-items-center">
+                  <div id="saludo" class="col">
+                      <i>H</i><i>o</i><i>l</i><i>a</i><i>,</i> <br> <i>s</i><i>o</i><i>y </i> <i>Len</i>
+                      <h3>Desarrollador web</h3>
+                      <a href="#contactos"><button type="button" class="btn btn-secondary ">Contactos</button></a>
+                  </div>
+                  <div id="nubeLluvia" class="col">
+                      <div class="text-center centrado-flex">
+                          <!-- Gris -->
+                          <img src="../Portfolio/images/nubeG.png" class="rounded" alt="Nube" id="nubeGris">
+                          <!-- Blanca -->
+                          <img src="../Portfolio/images/pacNubeB.png" class="rounded" alt="Nube" id="nubeBlanca">
+                          <img src="../Portfolio/images/nubeB.png" class="rounded desvanece" alt="Nube"
+                              id="nubeBlanca">
+                      </div>
+                      <!-- Lluivia matrix -->
+                      <div id="lienzo" class="row burbujas">
+                          <div class="col-2 efectoCaida burbuja absolute">
+                              <p>1</p>
+                          </div>
+                          <div class="col-2 efectoCaida burbuja absolute">
+                              <p>0</p>
+                          </div>
+                          <div class="col-2 efectoCaida burbuja absolute">
+                              <p>1</p>
+                          </div>
+                          <div class="col-2 efectoCaida burbuja absolute">
+                              <p>0</p>
+                          </div>
+                          <div class="col-2 efectoCaida burbuja absolute">
+                              <p>1</p>
+                          </div>
+                          <div class="col-2 efectoCaida burbuja absolute">
+                              <p>1</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
           </div>
-          <div id="centrado" class="col-md-4 fondo">
-            <a href="">
-              <span class="material-icons-round iconoUsuario">
-                account_circle
-              </span>
-            </a>
-          </div>
-        </div>
-        <!--presentacion-->
-        <div id="bienvenida" class="row align-items-center">
-          <div id="saludo" class="col">
-            <i>H</i><i>o</i><i>l</i><i>a</i><i>, </i><br></i> <i>s</i><i>o</i><i>y </i> <i>Len</i>
-            <h3>Desarrollador web</h3>
-            <a href="#contactos"><button type="button" class="btn btn-secondary ">Contactos</button></a>
-          </div>
-          <div id="nubeLluvia" class="col">
-            <div class="text-center centrado-flex">
-              <!-- Gris -->
-              <img src="../Portfolio/images/nubeG.png" class="rounded" alt="Nube" id="nubeGris">
-              <!-- Blanca -->
-              <img src="../Portfolio/images/pacNubeB.png" class="rounded" alt="Nube" id="nubeBlanca">
-              <img src="../Portfolio/images/nubeB.png" class="rounded desvanece" alt="Nube" id="nubeBlanca">
-            </div>
-            <!-- Lluivia matrix -->
-            <div id="lienzo" class="row burbujas">
-              <div class="col-2 efectoCaida burbuja absolute">
-                <p>1</p>
-              </div>
-              <div class="col-2 efectoCaida burbuja absolute">
-                <p>0</p>
-              </div>
-              <div class="col-2 efectoCaida burbuja absolute">
-                <p>1</p>
-              </div>
-              <div class="col-2 efectoCaida burbuja absolute">
-                <p>0</p>
-              </div>
-              <div class="col-2 efectoCaida burbuja absolute">
-                <p>1</p>
-              </div>
-              <div class="col-2 efectoCaida burbuja absolute">
-                <p>1</p>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
   </header>
   <!--Sobre Mi-->
   <div id="about" class="padding-left background-alt pt-3 pb-3">
-    <div class="container-fluid">
-      <div class="row justify-content-between">
-        <div class="col-md-2">
-          <h2 class="heading">Sobre Mí</h2>
-        </div>
-        <!--Imagen e info-->
-        <div class="col-md-9">
-          <div id="" class="col-md-3 rounded-start fotoPerfil rounded-circles">
-            <img src="images/perfil.jpg" class="img-thumbnail rounded-circles" alt="Foto Perfil">
-          </div>
-          <div>
-            <h4 id="nombrePersonal">Leandro Alonso</h4>
-            <p id="descripcionAbout">
-              Siendo estudiante de Desarrollo Web,
-              me gustaría poder ser parte de una
-              zona en la que pueda demostrar mis
-              conocimientos y que a la vez me
-              permita mejorar tanto en lo personal
-              como profesionalmente. Considero
-              importante tener curiosidad y
-              motivación de aprender
-              continuamente, también tener
-              desafíos que avanzar y poder obtener
-              aprendizaje de ellos. Me agrada el
-              trabajo en equipo y el compañerismo.
+      <div class="container-fluid">
+          <div class="row justify-content-between">
+              <div class="col-md-2">
+                  <h2 class="heading">Sobre Mí</h2>
+              </div>
+              <!--Imagen e info-->
+              <div class="col-md-9">
+                  <div id="" class="col-md-3 rounded-start fotoPerfil rounded-circles">
+                      <img src="images/perfil.jpg" class="img-thumbnail rounded-circles" alt="Foto Perfil">
+                  </div>
+                  <div>
+                      <h4 id="nombrePersonal">Leandro Alonso</h4>
+                      <p id="descripcionAbout">
+                          Siendo estudiante de Desarrollo Web,
+                          me gustaría poder ser parte de una
+                          zona en la que pueda demostrar mis
+                          conocimientos y que a la vez me
+                          permita mejorar tanto en lo personal
+                          como profesionalmente. Considero
+                          importante tener curiosidad y
+                          motivación de aprender
+                          continuamente, también tener
+                          desafíos que avanzar y poder obtener
+                          aprendizaje de ellos. Me agrada el
+                          trabajo en equipo y el compañerismo.
 
-            </p>
+                      </p>
+                  </div>
+              </div>
           </div>
-        </div>
       </div>
-    </div>
   </div>
   <!--Experiencias-->
   <div id="experience" class="background-alt padding-left">
-    <h2 class="heading">Experiencias</h2>
-    <div id="experience-timeline">
-      <div class="vtimeline-point">
-        <div class="vtimeline-icon">
-          <i class="circle">
-          </i>
-        </div>
-        <div class="row-fluid vtimeline-block">
-          <p class="vtimeline-date col-12 col-md-4">Febrero 2019 – Marzo 2019</p>
-          <div data-date="September 2015 – September 2016" class="vtimeline-content">
-            <h3>NevenPro</h3>
-            <h4>Call Center</h4>
-            <p>
-            <ul>
-              <li>Atencion de llamadas</li>
-              <li>Suministro de datos de contacto</li>
-              <li>Resolucion de problemas de clientes</li>
-            </ul>
-            </p>
+      <h2 class="heading">Experiencias</h2>
+      <div id="experience-timeline">
+          <div class="vtimeline-point">
+              <div class="vtimeline-icon">
+                  <i class="circle">
+                  </i>
+              </div>
+              <div class="row-fluid vtimeline-block">
+                  <p class="vtimeline-date col-12 col-md-4">Febrero 2019 – Marzo 2019</p>
+                  <div data-date="September 2015 – September 2016" class="vtimeline-content">
+                      <h3>NevenPro</h3>
+                      <h4>Call Center</h4>
+                      <ul>
+                          <li>Atencion de llamadas</li>
+                          <li>Suministro de datos de contacto</li>
+                          <li>Resolucion de problemas de clientes</li>
+                      </ul>
+                  </div>
+              </div>
           </div>
-        </div>
-      </div>
-      <div class="vtimeline-point">
-        <div class="vtimeline-icon">
-          <i class="circle">
-          </i>
-        </div>
-        <div class="vtimeline-block">
-          <p class="vtimeline-date">Enero 2015 – Febrero 2019</p>
-          <div data-date="September 2015 – September 2016" class="vtimeline-content">
-            <h3>Verduleria Don Alfredo</h3>
-            <h4>Verduleria</h4>
-            <p>
-            <ul>
-              <li>Recepcionar la mercaderia al publico o almacenarla</li>
-              <li>Experiencia en la caja registradora, calculadoras y aceptar pagos o dar cambios</li>
+          <div class="vtimeline-point">
+              <div class="vtimeline-icon">
+                  <i class="circle">
+                  </i>
+              </div>
+              <div class="vtimeline-block">
+                  <p class="vtimeline-date">Enero 2015 – Febrero 2019</p>
+                  <div data-date="September 2015 – September 2016" class="vtimeline-content">
+                      <h3>Verduleria Don Alfredo</h3>
+                      <h4>Verduleria</h4>
+                      <ul>
+                          <li>Recepcionar la mercaderia al publico o almacenarla</li>
+                          <li>Experiencia en la caja registradora, calculadoras y aceptar pagos o dar cambios</li>
+                      </ul>
 
-            </ul>
-            </p>
+                  </div>
+              </div>
           </div>
-        </div>
       </div>
-    </div>
   </div>
-
-
   <!--Educacion-->
   <div id="education" class="padding-left background-alt">
-    <h2 class="heading">Educación</h2>
-    <div>
+      <h2 class="heading">Educación</h2>
+      <div>
 
-      <div class="conteiner-fluid">
-        <div class="row">
-          <!--Izq-->
-          <div class="col-12 col-md-8">
-            <div class="row">
-              <div class="col-12 p-1">
-                <article class="card h-100">
-                  <div class="card-body">
-                    <div class="descriptionEducation">
-                      <div class="grid-centrado">
-                        <img src="../Portfolio/images/unlam-link.svg" class="border-3 rounded-circles float-start"
-                          alt="..." width="50px" height="50px">
-                        <div class="ps-2">
-                          <h3>Universidad Nacional de La Matanza</h3>
-                          <span class="education-date">Abr 2020 - Actualidad</span>
-                        </div>
+          <div class="conteiner-fluid">
+              <div class="row">
+                  <!--Izq-->
+                  <div class="col-12 col-md-8">
+                      <div class="row">
+                          <div class="col-12 p-1">
+                              <article class="card h-100">
+                                  <div class="card-body">
+                                      <div class="descriptionEducation">
+                                          <div class="grid-centrado">
+                                              <img src="../Portfolio/images/unlam-link.svg"
+                                                  class="border-3 rounded-circles float-start" alt="..." width="50px"
+                                                  height="50px">
+                                              <div class="ps-2">
+                                                  <h3>Universidad Nacional de La Matanza</h3>
+                                                  <span class="education-date">Abr 2020 - Actualidad</span>
+                                              </div>
+                                          </div>
+                                          <h4>Tecnicatura de Desarrollo Web</h4>
+                                          <ul class="">
+                                              <li>
+                                                  Materias aprobadas: 10
+                                              </li>
+                                              <li>
+                                                  Promedio: 8.10
+                                              </li>
+                                          </ul>
+                                      </div>
+                                  </div>
+                              </article>
+                          </div>
+                          <div class="col-12 p-1">
+                              <article class="card h-100">
+                                  <div class="card-body">
+                                      <div class="descriptionEducation">
+                                          <div class="grid-centrado">
+                                              <img src="../Portfolio/images/unlam-link.svg"
+                                                  class="border-3 rounded-circles float-start" alt="..." width="50px"
+                                                  height="50px">
+                                              <div class="ps-2">
+                                                  <h3>Universidad Nacional de La Matanza</h3>
+                                                  <span class="education-date">Ago 2018 - Dic 2020</span>
+                                              </div>
+                                          </div>
+                                          <h4>Ingeniería Informática</h4>
+                                          <ul>
+                                              <li>
+                                                  Materias aprobadas: 4
+                                              </li>
+                                              <li>
+                                                  Promedio: 8.00
+                                              </li>
+                                          </ul>
+                                      </div>
+                                  </div>
+                              </article>
+                          </div>
+                          <div class="col-12 p-1">
+                              <article class="card h-100">
+                                  <div class="card-body">
+                                      <div class="descriptionEducation">
+                                          <div class="grid-centrado">
+                                              <img src="../Portfolio/images/nubeG.png"
+                                                  class="border-3 rounded-circles float-start" alt="..." width="50px"
+                                                  height="50px">
+                                              <div class="ps-2">
+                                                  <h3>Instituto Parroquial San Jose</h3>
+                                                  <span class="education-date">Mar 2006 - Dic 2016</span>
+                                              </div>
+                                          </div>
+                                          <h4>Bachiller en Economía y Administración</h4>
+                                          <ul>
+                                              <li>
+                                                  Primaria y secundaria
+                                              </li>
+                                              <li>
+                                                  Promedio: 8.11
+                                              </li>
+                                          </ul>
+                                      </div>
+                                  </div>
+                              </article>
+                          </div>
                       </div>
-                      <h4>Tecnicatura de Desarrollo Web</h4>
-                      <ul class="">
-                        <li>
-                          Materias aprobadas: 10
-                        </li>
-                        <li>
-                          Promedio: 8.10
-                        </li>
-                      </ul>
-                    </div>
                   </div>
-                </article>
-              </div>
-              <div class="col-12 p-1">
-                <article class="card h-100">
-                  <div class="card-body">
-                    <div class="descriptionEducation">
-                      <div class="grid-centrado">
-                        <img src="../Portfolio/images/unlam-link.svg" class="border-3 rounded-circles float-start"
-                          alt="..." width="50px" height="50px">
-                        <div class="ps-2">
-                          <h3>Universidad Nacional de La Matanza</h3>
-                          <span class="education-date">Ago 2018 - Dic 2020</span>
-                        </div>
-                      </div>
-                      <h4>Ingeniería Informática</h4>
-                      <ul>
-                        <li>
-                          Materias aprobadas: 4
-                        </li>
-                        <li>
-                          Promedio: 8.00
-                        </li>
-                      </ul>
-                    </div>
+                  <!--Der-->
+                  <div class="col-12 col-md-4 p-1">
+                      <article class="card h-100">
+                          <div class="card-body">
+                              <div class="">
+                                  <div id="cursos" class="d-flex">
+                                      <div>
+                                          <h4>Cursos</h4>
+                                      </div>
+                                  </div>
+                                  <ul id="listaCursos">
+                                      <li>
+                                          <a target="_blank"
+                                              href="https://mumuki.io/argentina-programa/certificates/verify/4_hpRM6KyQBN9MJX">
+                                              #SéProgramar
+                                          </a> | Argentina Programa 2021
+                                      </li>
+                                      <li>
+                                          <a target="_blank"
+                                              href="https://www.udemy.com/certificate/UC-639fedf2-9cd8-4610-9fa6-d9ca93c17f33/">
+                                              SQL Básico -
+                                              Intermedio</a> | Udemy
+                                      </li>
+                                      <li>
+                                          <a target="_blank"
+                                              href="https://www.udemy.com/certificate/UC-c3d6b557-df57-4860-a450-2c24371e6908/">
+                                              Universidad
+                                              Excel - Básico, intermedio y avanzado</a> | Udemy
+                                      </li>
+                                  </ul>
+                                  <div id="idiomas" class="d-flex">
+                                      <div>
+                                          <h4>Idiomas</h4>
+                                      </div>
+                                  </div>
+                                  <ul id="listaIdiomas">
+                                      <li>
+                                          Ingles | Básico
+                                      </li>
+                                      <li>
+                                          Portugués | Básico
+                                      </li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </article>
                   </div>
-                </article>
               </div>
-              <div class="col-12 p-1">
-                <article class="card h-100">
-                  <div class="card-body">
-                    <div class="descriptionEducation">
-                      <div class="grid-centrado">
-                        <img src="../Portfolio/images/nubeG.png" class="border-3 rounded-circles float-start" alt="..."
-                          width="50px" height="50px">
-                        <div class="ps-2">
-                          <h3>Instituto Parroquial San Jose</h3>
-                          <span class="education-date">Mar 2006 - Dic 2016</span>
-                        </div>
-                      </div>
-                      <h4>Bachiller en Economía y Administración</h4>
-                      <ul>
-                        <li>
-                          Primaria y secundaria
-                        </li>
-                        <li>
-                          Promedio: 8.11
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </article>
-              </div>
-            </div>
           </div>
-          <!--Der-->
-          <div class="col-12 col-md-4 p-1">
-            <article class="card h-100">
-              <div class="card-body">
-                <div class="">
-                  <div id="cursos" class="d-flex">
-                    <div>
-                      <h4>Cursos</h4>
-                    </div>
-                  </div>
-                  <ul id="listaCursos">
-                    <li>
-                      <a target="_blank"
-                        href="https://mumuki.io/argentina-programa/certificates/verify/4_hpRM6KyQBN9MJX"> #SéProgramar
-                      </a> | Argentina Programa 2021
-                    </li>
-                    <li>
-                      <a target="_blank"
-                        href="https://www.udemy.com/certificate/UC-639fedf2-9cd8-4610-9fa6-d9ca93c17f33/"> SQL Básico -
-                        Intermedio</a> | Udemy
-                    </li>
-                    <li>
-                      <a target="_blank"
-                        href="https://www.udemy.com/certificate/UC-c3d6b557-df57-4860-a450-2c24371e6908/"> Universidad
-                        Excel - Básico, intermedio y avanzado</a> | Udemy
-                    </li>
-                  </ul>
-                  <div id="idiomas" class="d-flex">
-                    <div>
-                      <h4>Idiomas</h4>
-                    </div>
-                  </div>
-                  <ul id="listaIdiomas">
-                    <li>
-                      Ingles | Básico
-                    </li>
-                    <li>
-                      Portugués | Básico
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
+
+
       </div>
-
-
-    </div>
   </div>
-
-
-
-
   <!--Habilidades-->
   <div id="skill" class="conteiner-fluid padding-left background-alt">
-    <h2 class="heading">Habilidades</h2>
-    <div id="/*experience-timeline*/">
-      <div class="row justify-content-between">
-        <div class="col-12 col-md-5 p-3">
-          <h4>HTML</h4>
-          <div class="bg-white col-12 col-md-9 placeholder-wave">
-            <div id="colorBarra" class="barraHab placeholder" style="height: 29px;width:90%;"></div>
-          </div>
-        </div>
-        <div class="col-12 col-md-5 p-3">
-          <h4>CSS</h4>
-          <div class="bg-white col-12 col-md-9 placeholder-wave">
-            <div id="colorBarra" class="barraHab  placeholder" style="height: 29px;width:55%;"></div>
-          </div>
-        </div>
+      <h2 class="heading">Habilidades</h2>
+      <div id="/*experience-timeline*/">
+          <div class="row justify-content-between">
+              <div class="col-12 col-md-5 p-3">
+                  <h4>HTML</h4>
+                  <div class="bg-white col-12 col-md-9 placeholder-wave">
+                      <div id="colorBarra" class="barraHab placeholder" style="height: 29px;width:90%;"></div>
+                  </div>
+              </div>
+              <div class="col-12 col-md-5 p-3">
+                  <h4>CSS</h4>
+                  <div class="bg-white col-12 col-md-9 placeholder-wave">
+                      <div id="colorBarra" class="barraHab  placeholder" style="height: 29px;width:55%;"></div>
+                  </div>
+              </div>
 
-        <div class="col-12 col-md-5 p-3">
-          <h4>MySQL</h4>
-          <div class="bg-white col-12 col-md-9 placeholder-wave">
-            <div id="colorBarra" class="barraHab placeholder" style="height: 29px;width:75%;"></div>
-          </div>
-        </div>
+              <div class="col-12 col-md-5 p-3">
+                  <h4>MySQL</h4>
+                  <div class="bg-white col-12 col-md-9 placeholder-wave">
+                      <div id="colorBarra" class="barraHab placeholder" style="height: 29px;width:75%;"></div>
+                  </div>
+              </div>
 
-        <div class="col-12 col-md-5 p-3">
-          <h4>JAVA</h4>
-          <div class="bg-white col-12 col-md-9 placeholder-wave">
-            <div id="colorBarra" class="barraHab placeholder" style="height: 29px;width:65%;"></div>
+              <div class="col-12 col-md-5 p-3">
+                  <h4>JAVA</h4>
+                  <div class="bg-white col-12 col-md-9 placeholder-wave">
+                      <div id="colorBarra" class="barraHab placeholder" style="height: 29px;width:65%;"></div>
+                  </div>
+              </div>
+              <div class="col-12 col-md-5 p-3">
+                  <h4>JAVASCRIPT</h4>
+                  <div class="bg-white col-12 col-md-9 placeholder-wave">
+                      <div id="colorBarra" class="barraHab  placeholder" style="height: 29px;width:40%;"></div>
+                  </div>
+              </div>
+              <div class="col-12 col-md-5 p-3">
+                  <h4>BASE DE DATOS RELACIONALES</h4>
+                  <div class="bg-white col-12 col-md-9 placeholder-wave">
+                      <div id="colorBarra" class="barraHab  placeholder" style="height: 29px;width:65%;"></div>
+                  </div>
+              </div>
           </div>
-        </div>
-        <div class="col-12 col-md-5 p-3">
-          <h4>JAVASCRIPT</h4>
-          <div class="bg-white col-12 col-md-9 placeholder-wave">
-            <div id="colorBarra" class="barraHab  placeholder" style="height: 29px;width:40%;"></div>
-          </div>
-        </div>
-        <div class="col-12 col-md-5 p-3">
-          <h4>BASE DE DATOS RELACIONALES</h4>
-          <div class="bg-white col-12 col-md-9 placeholder-wave">
-            <div id="colorBarra" class="barraHab  placeholder" style="height: 29px;width:65%;"></div>
-          </div>
-        </div>
       </div>
-    </div>
   </div>
-
   <!--Proyectos-->
   <div id="proyecto" class="background-alt padding-left">
-    <h2 class="heading">Proyectos</h2>
-    <div class="container px-4 ">
-      <div class="row g-0">
-        <div class="col">
-          <div class="p-3 border bg-light mb-3">
-            <div id="configProyecto" class="d-flex justify-content-between">
-              <div class="ps-2 col-md-6">
-                <img src="../Portfolio/images/nubeG.png"
-                  class="border border-secondary border-3 rounded-circles float-start" alt="..." width="50px"
-                  height="50px">
-                <h3 class="ps-2 row">Proyecto-1</h3>
-                <span class="education-date row ps-2">Sept 2016 - Sept 2017</span>
+      <h2 class="heading">Proyectos</h2>
+      <div class="container px-4 ">
+          <div class="row g-0">
+              <div class="col">
+                  <div class="p-3 border bg-light mb-3">
+                      <div id="configProyecto" class="d-flex justify-content-between">
+                          <div class="ps-2 col-md-6">
+                              <img src="../Portfolio/images/nubeG.png"
+                                  class="border border-secondary border-3 rounded-circles float-start" alt="..."
+                                  width="50px" height="50px">
+                              <h3 class="ps-2 row">Proyecto-1</h3>
+                              <span class="education-date row ps-2">Sept 2016 - Sept 2017</span>
+                          </div>
+                          <button type="button" class="btn btn-secondary ">Mas Informacion</button>
+                      </div>
+                      <div class="p-3">
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, harum!
+                      </div>
+
+                  </div>
+                  <div class="col">
+                  </div>
               </div>
-              <button type="button" class="btn btn-secondary ">Mas Informacion</button>
-            </div>
-            <div class="p-3">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, harum!
-            </div>
-
           </div>
-          <div class="col">
-          </div>
-        </div>
       </div>
-    </div>
-    </div>
-
-
-
-    <!--Contactos(Opcional)-->
-
-
+  </div>
+  <!--Contactos(Opcional)-->
 </body>
 <footer>
   <div id="contactos" class="background-alt bg-dark padding-left">
-  
-    <div class="row justify-content-center p-3 pb-5">
-      <p>Contactos:</p>
-      <div class="col-1 bg-dark ">
-        <a target="_blank" href="https://www.instagram.com/len_alonso22/?hl=es-la"><img src="images/icon/instagram.png"  alt="Instagram" width="40px"></a>
+
+      <div class="row justify-content-center p-3 pb-5">
+          <p>Contactos:</p>
+          <div class="col-1 bg-dark ">
+              <a target="_blank" href="https://www.instagram.com/len_alonso22/?hl=es-la"><img
+                      src="images/icon/instagram.png" alt="Instagram" width="40px"></a>
+          </div>
+          <div class="col-1 bg-dark">
+              <a target="_blank" href="https://www.linkedin.com/in/leandro-alonso-4369511b4/"><img
+                      src="images/icon/linkedin.png" alt="LinkedIn" width="40px"></a>
+          </div>
+          <div class="col-1 bg-dark">
+              <a target="_blank" href="https://github.com/Lenh22"><img src="images/icon/github.png" alt="GitHub"
+                      width="40px"></a>
+          </div>
       </div>
-      <div class="col-1 bg-dark">
-        <a target="_blank" href="https://www.linkedin.com/in/leandro-alonso-4369511b4/"><img src="images/icon/linkedin.png"  alt="LinkedIn" width="40px"></a>
-      </div >
-      <div class="col-1 bg-dark">
-      <a target="_blank" href="https://github.com/Lenh22"><img src="images/icon/github.png"  alt="GitHub" width="40px"></a>
-      </div>
-    </div>
   </div>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
+  <script src="js/login.js"></script>
 </html>
